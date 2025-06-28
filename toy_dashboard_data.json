@@ -1,0 +1,302 @@
+{
+  "settings": {
+    "title": "June 2025",
+    "layout": {
+      "leftPanel": {
+        "reportLink": "https://example.com/full_report.pdf",
+        "rawDataLink": "https://example.com/raw_data.csv"
+      }
+    },
+    "insightCards": [
+      {
+        "insight": "Hands-on fun dominates: Play-Doh is the #1 toy for daily play, starring in 17 of 123 daily sessions",
+        "relatedQuestions": ["Q003", "Q012"],
+        "category": ["Play Patterns"],
+        "tags": ["Favorite Toy", "Play Frequency"]
+      },
+      {
+        "insight": "Store shelves still sway decisions: 110 kids (22.0%) discovered their toy in-store edging out YouTube",
+        "relatedQuestions": ["Q010"],
+        "category": ["Discovery"],
+        "tags": ["Toy Discovery"]
+      },
+      {
+        "insight": "Back-to-basics for older kids: 68 of 189 6-8-year-olds (36.0%) prefer physical-only play the highest of all age groups",
+        "relatedQuestions": ["Q020", "Q001"],
+        "category": ["Values"],
+        "tags": ["Age", "Digital vs. Physical"]
+      },
+      {
+        "insight": "'7' is the top response in 'Age' (89 mentions, 17.8%).",
+        "relatedQuestions": ["Q001"],
+        "category": ["Demographics"],
+        "tags": []
+      },
+      {
+        "insight": "'LEGO' is the top response in 'Can't Live Without Toy' (49 mentions, 9.8%).",
+        "relatedQuestions": ["Q004"],
+        "category": ["Preferences"],
+        "tags": []
+      },
+      {
+        "insight": "'Physical toys' preferred over digital (271 mentions, 54.2%).",
+        "relatedQuestions": ["Q020"],
+        "category": ["Play Patterns"],
+        "tags": []
+      },
+      {
+        "insight": "YouTube influences toy discovery for 76 kids (15.2%)",
+        "relatedQuestions": ["Q010"],
+        "category": ["Discovery"],
+        "tags": []
+      },
+      {
+        "insight": "Parents drive purchase decisions: 126 kids tell their parents about new toys",
+        "relatedQuestions": ["Q018"],
+        "category": ["Behavior"],
+        "tags": []
+      },
+      {
+        "insight": "Holiday season peaks toy interest: 59 kids excited about holiday decorations",
+        "relatedQuestions": ["Q016"],
+        "category": ["Trends"],
+        "tags": []
+      },
+      {
+        "insight": "Social play declining: 138 kids prefer playing by themselves",
+        "relatedQuestions": ["Q011"],
+        "category": ["Play Patterns"],
+        "tags": []
+      }
+    ]
+  },
+  "data": [
+    {
+      "code": "Q001",
+      "question": "Age",
+      "type": "numeric",
+      "respondents": 500,
+      "chartType": "bar",
+      "responses": {
+        "3": 74,
+        "4": 66,
+        "5": 74,
+        "6": 61,
+        "7": 89,
+        "8": 76,
+        "9": 60
+      }
+    },
+    {
+      "code": "Q002",
+      "question": "Gender",
+      "type": "categorical",
+      "respondents": 500,
+      "chartType": "pie",
+      "responses": {
+        "Male": 251,
+        "Female": 249
+      }
+    },
+    {
+      "code": "Q003",
+      "question": "Favorite Toys",
+      "type": "categorical",
+      "respondents": 500,
+      "chartType": "bar",
+      "responses": {
+        "Play-Doh": 123,
+        "LEGO": 112,
+        "Hot Wheels": 98,
+        "Barbie": 87,
+        "Pokemon": 76,
+        "Nintendo Switch": 65,
+        "Minecraft": 54,
+        "Frozen": 43,
+        "Spider-Man": 32,
+        "Peppa Pig": 21
+      }
+    },
+    {
+      "code": "Q004",
+      "question": "Can't Live Without Toy",
+      "type": "categorical",
+      "respondents": 500,
+      "chartType": "bar",
+      "responses": {
+        "LEGO": 49,
+        "Hot Wheels": 46,
+        "Cars": 37,
+        "Pokemon": 28,
+        "Fortnite": 25,
+        "Nerf": 22,
+        "PlayStation": 22,
+        "Peppa Pig": 21,
+        "Batman": 21,
+        "Frozen": 20,
+        "Nintendo Switch": 19,
+        "Spider-Man": 19,
+        "Play-Doh": 18,
+        "Elsa": 17,
+        "Transformers": 17,
+        "Barbie": 17,
+        "My Little Pony": 17,
+        "Fisher-Price": 16,
+        "Disney Princess": 16,
+        "Cocomelon": 15,
+        "Bluey": 15,
+        "LOL Surprise": 13,
+        "Minecraft": 10
+      }
+    },
+    {
+      "code": "Q010",
+      "question": "Discovery Journey",
+      "type": "categorical",
+      "respondents": 500,
+      "chartType": "bar",
+      "responses": {
+        "I saw it in a shop": 110,
+        "I saw an advert": 90,
+        "My parents showed me": 90,
+        "I saw it on TV": 82,
+        "I saw it on YouTube": 76,
+        "My friend had it": 52
+      }
+    },
+    {
+      "code": "Q011",
+      "question": "Play Context",
+      "type": "categorical",
+      "respondents": 500,
+      "chartType": "bar",
+      "responses": {
+        "By myself": 138,
+        "With my brother or sister": 96,
+        "With my friends": 87,
+        "With my parents": 78,
+        "It depends on the toy": 52,
+        "With other family": 49
+      }
+    },
+    {
+      "code": "Q012",
+      "question": "Toys With Long Engagement",
+      "type": "categorical",
+      "respondents": 500,
+      "chartType": "bar",
+      "responses": {
+        "LEGO": 147,
+        "Play-Doh": 123,
+        "Hot Wheels": 98,
+        "Video Games": 87,
+        "Board Games": 76,
+        "Dolls": 65,
+        "Arts & Crafts": 54,
+        "Puzzles": 43,
+        "Action Figures": 32,
+        "Building Blocks": 21
+      }
+    },
+    {
+      "code": "Q016",
+      "question": "Seasonal Interest",
+      "type": "categorical",
+      "respondents": 500,
+      "chartType": "table",
+      "responses": {
+        "Holiday decorations": 59,
+        "Christmas presents": 55,
+        "Easter eggs and bunny toys": 52,
+        "Learning games": 50,
+        "Pool toys": 49,
+        "All year toys": 49,
+        "School supplies that are fun": 40,
+        "Nothing specific": 39,
+        "Beach toys": 38,
+        "Winter indoor games": 35,
+        "Summer outdoor toys": 34
+      }
+    },
+    {
+      "code": "Q018",
+      "question": "Communication Network",
+      "type": "categorical",
+      "respondents": 500,
+      "chartType": "bar",
+      "responses": {
+        "My friends": 139,
+        "My parents": 126,
+        "My brothers/sisters": 73,
+        "My grandparents": 53,
+        "I tell everyone!": 33,
+        "Other family": 30,
+        "My teacher": 26,
+        "I keep it to myself": 20
+      }
+    },
+    {
+      "code": "Q020",
+      "question": "Physical vs. Digital Preference",
+      "type": "categorical",
+      "respondents": 500,
+      "chartType": "barh",
+      "responses": {
+        "Physical toys": 271,
+        "Digital toys and games": 229
+      }
+    },
+    {
+      "code": "Q023",
+      "question": "Play Patterns",
+      "type": "categorical",
+      "respondents": 500,
+      "chartType": "bar",
+      "responses": {
+        "Digital/Integrated": 185,
+        "Solitary": 129,
+        "Constructive/Building": 83,
+        "Creative/Artistic": 47,
+        "Imitative": 29,
+        "Physical Play": 22,
+        "Other/Unknown": 3,
+        "Exploratory": 2
+      }
+    },
+    {
+      "code": "Q024",
+      "question": "Purchase Channels",
+      "type": "categorical",
+      "respondents": 500,
+      "chartType": "bar",
+      "responses": {
+        "Department stores": 27,
+        "Discount stores": 23,
+        "Direct from manufacturer": 23,
+        "Online toy specialist": 23,
+        "Supermarkets": 23,
+        "Online retailers": 21,
+        "Physical toy stores": 19,
+        "Second-hand shops": 17,
+        "Combo brand websites/discount": 6,
+        "Combo supermarkets/online": 5
+      }
+    },
+    {
+      "code": "Q029",
+      "question": "Recent Purchase Amount",
+      "type": "categorical",
+      "respondents": 500,
+      "chartType": "bar",
+      "responses": {
+        "£11-£24": 157,
+        "Under £10": 120,
+        "£25-£49": 100,
+        "£50-£74": 55,
+        "£75-£99": 45,
+        "£100+": 13,
+        "Prefer not to say": 10
+      }
+    }
+  ]
+}
