@@ -1,279 +1,354 @@
-### Dashboard View Modes
+# Survey Dashboard Hub
 
-The dashboard supports multiple view modes:
+A modern, interactive analytics dashboard built with Streamlit for visualizing and exploring survey data. This tool provides an intuitive interface for research analysts to dive deep into survey insights with powerful filtering and visualization capabilities.
 
-1. **Compact View**: Shows summary metrics and key charts
-2. **Detailed View**: Displays all survey questions with full visualizations
-3. **Filtered View**: Shows only charts related to selected insights or tags
+**Live Demo**: [YOUR_STREAMLIT_CLOUD_LINK_HERE]
 
-Click the view toggle buttons in the top-right to switch between modes.# Survey Dashboard Hub - Streamlit App
-
-A modern, professional survey analytics dashboard built with Streamlit, featuring advanced data visualization for children's toy preferences and market research insights.
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Navigation Guide](#navigation-guide)
+  - [Login Page](#login-page)
+  - [Trackers Selection Page](#trackers-selection-page)
+  - [Dashboard Page](#dashboard-page)
+- [Data Structure](#data-structure)
+- [Customization](#customization)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
 
 ## Features
 
-- **Secure Login**: Clean authentication interface with centered login form
-- **Dashboard Hub**: Central location to access different survey trackers
-- **Advanced Dashboard Layout**:
-  - Sidebar with downloads and podcast summary sections
-  - Dynamic insight cards with category tags
-  - Interactive filters for Age and Gender
-  - Wave selector for different survey periods
-  - Chart view customization based on selected insights
-- **Interactive Visualizations**: 
-  - Dynamic Plotly charts
-  - Multiple chart types (bar, pie, line)
-  - Export and zoom capabilities
-- **Modern UI/UX**: 
-  - Professional design matching enterprise dashboards
-  - Smooth transitions and hover effects
-  - Color-coded insight categories
-  - Responsive layout
-- **Data Management**: 
-  - Full report PDF download
-  - Raw data CSV export
-  - 10+ insights with drill-down capabilities
+- 🔐 **Secure Login System** - Simple authentication for accessing the dashboard
+- 📊 **Multiple Tracker Support** - Organize different survey topics (Sports, Toys, Education, etc.)
+- 🎯 **Smart Insights** - AI-generated key insights with question filtering
+- 📈 **Interactive Visualizations** - Bar charts, pie charts, horizontal bars, and tables
+- 🔍 **Advanced Filtering** - Filter by age, gender, location, and income
+- 📱 **Responsive Design** - Works seamlessly on desktop and tablet devices
+- 🎨 **Modern UI/UX** - Clean, professional interface with smooth animations
 
-## Setup Instructions
+## Installation
 
-### 1. Install Dependencies
+### Prerequisites
+- Python 3.8 or higher
+- pip package manager
 
+### Local Setup
+
+1. Clone the repository:
+```bash
+git clone <your-repository-url>
+cd survey-dashboard-hub
+```
+
+2. Create a virtual environment (recommended):
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. File Structure
-
-Ensure your project directory contains:
+4. Create a `requirements.txt` file with:
 ```
-project_folder/
-│
-├── app.py                                    # Main Streamlit application
-├── generated_toy_dashboard_June2025_CLEANED.json  # Data file
-└── requirements.txt                          # Python dependencies
+streamlit==1.32.0
+pandas==2.2.0
+plotly==5.19.0
 ```
 
-### 3. Run the Application
-
+5. Run the application:
 ```bash
 streamlit run app.py
 ```
 
-The app will open in your default browser at `http://localhost:8501`
+## Navigation Guide
 
-## Usage
+### Login Page
 
-### Login
-- Enter any username and password to access the dashboard
-- User info appears in the top-right corner after login
+The login page is your entry point to the dashboard:
 
-### Tracker Selection
-- View key metrics: Total Trackers, Surveys, Responses, and Active Trackers
-- Three tracker options available:
-  - Sports Tracker (Coming Soon)
-  - Toys & Play (Active)
-  - Education Tracker (Coming Soon)
-- Click "Open Toys & Play Dashboard" to access the analytics
+- **Username/Password**: Enter any credentials (authentication is simulated)
+- **Sign In Button**: Redirects to the Trackers Selection page
+- **Design**: Clean, centered login form with the TIF logo
 
-### Dashboard Features
+![Login Flow]
+```
+Login → Enter Credentials → Sign In → Trackers Page
+```
 
-#### Sidebar
-- **Downloads**: Export full report PDF or raw CSV data
-- **Podcast Summary**: Access audio discussions
+### Trackers Selection Page
 
-#### Main Dashboard
-- **Key Insights**: 
-  - View top 3 of 10 available insights
-  - Click insights to filter related charts
-  - Filter by tags: All Insights, Play Patterns, Discovery, Values, Behavior, Trends
-  
-- **Filters Section**:
-  - Age filter: All Age, 3-5, 6-7, 8-9
-  - Gender filter: All Gender, Male, Female
-  
-- **Survey Results**:
-  - Interactive charts for each survey question
-  - Chart actions: Change type, sort, download, save image, zoom
-  - Dynamic display based on selected insights
+This is your hub for accessing different survey trackers:
 
-- **Wave Selector**: 
-  - Switch between different survey periods
-  - View comparative data across waves
+**Main Components:**
+1. **Header Section**
+   - TIF logo and title
+   - User profile display (shows logged-in username)
+   
+2. **Available Trackers Grid**
+   - **Sports Tracker** - Track children's sports participation (Coming Soon)
+   - **Toys & Play** - Monitor toy preferences and play patterns (Active)
+   - **Education Tracker** - Analyze learning preferences (Coming Soon)
+   - **Health & Wellness** - Track health habits and nutrition (Coming Soon)
+   - **Consumer Behavior** - Understand purchasing decisions (Coming Soon)
 
-### Dashboard View Modes
+3. **Research Solutions Section**
+   - Attitude and Usage studies
+   - Brand Health Check
+   - Brand Lift measurements
+   - Innovation testing
 
-The dashboard supports multiple view modes:
+**Navigation:**
+- Click "Open Dashboard" on the Toys & Play tracker to access the dashboard
+- Other trackers show "Coming Soon" status
 
-1. **Compact View**: Shows summary metrics and key charts (default)
-2. **Detailed View**: Displays all survey questions with full visualizations
-3. **Filtered View**: Shows only charts related to selected insights or tags
+### Dashboard Page
 
-Use the view toggle buttons (💠 Compact / 📊 Detailed) to switch between modes.
+The main analytics interface with three key sections:
+
+#### 1. Header and Controls
+- **Back Button**: Return to Trackers page
+- **Country Selector**: Choose between UK, US, France, Germany, Spain, Italy
+- **Wave Selector**: Select Wave 1, 2, or 3
+- **User Info**: Displays current user profile
+
+#### 2. Key Insights Section
+**Features:**
+- **Category Filter**: All, Play Patterns, Discovery, Values, Demographics, etc.
+- **Insight Cards**: Display key findings with:
+  - Main insight text
+  - Related tags
+  - Related question codes
+  - "Filter Questions" button
+- **Pagination**: Navigate through insights with Previous/Next buttons
+
+**How to Use:**
+1. Select a category to filter insights
+2. Click "Filter Questions" on any insight card to show only related survey questions
+3. Use pagination to browse through all insights
+4. Click "Clear Filter" to remove question filtering
+
+#### 3. Filters Section
+**Available Filters:**
+- **Age Range**: Min Age (2-9), Max Age (2-9)
+- **Gender**: All, Boy, Girl
+- **Location**: UK regions including London, Scotland, Wales, etc.
+- **Income**: Various income brackets from Under £25,000 to £100,000+
+
+**Filter Actions:**
+- **Apply Filters**: Update the displayed data
+- **Clear All**: Reset all filters to defaults
+
+#### 4. Survey Questions & Results
+**Visualization Types:**
+- **Bar Charts**: Standard vertical bars for categorical data
+- **Horizontal Bar Charts**: For binary comparisons
+- **Pie Charts**: For distribution visualization
+- **Tables**: For detailed seasonal or multi-category data
+
+**Features:**
+- Questions arranged in a 2-column grid
+- Each chart shows question title and response counts
+- Filtered view shows only selected questions
+- "Show All Survey Questions" button to reset filtering
+
+## Data Structure
+
+The dashboard uses a JSON file (`toy_dashboard_data.json`) with the following structure:
+
+### Root Structure
+```json
+{
+  "settings": {
+    "title": "June 2025",
+    "layout": {...},
+    "insightCards": [...]
+  },
+  "data": [...]
+}
+```
+
+### Settings Object
+
+#### insightCards Array
+Each insight card contains:
+```json
+{
+  "insight": "Main insight text displayed on the card",
+  "relatedQuestions": ["Q001", "Q002"],  // Question codes to filter
+  "category": ["Play Patterns"],         // Categories for filtering
+  "tags": ["Favorite Toy", "Age"]       // Display tags
+}
+```
+
+### Data Array
+
+Each survey question object:
+```json
+{
+  "code": "Q001",                    // Unique question identifier
+  "question": "Age",                 // Display title
+  "type": "categorical",             // Question type
+  "respondents": 500,                // Total respondents
+  "chartType": "bar",                // Visualization type
+  "responses": {                     // Response data
+    "3": 74,
+    "4": 66,
+    "5": 74
+  }
+}
+```
+
+### Supported Chart Types
+- `"bar"` - Vertical bar chart
+- `"barh"` or `"horizontal_bar"` - Horizontal bar chart
+- `"pie"` - Pie chart
+- `"table"` - Data table
 
 ## Customization
 
-### Styling
-- Modify the CSS in the `st.markdown()` section for custom branding
-- Update color schemes:
-  - Primary blue: `#4A90E2` 
-  - Success green: `#4CAF50`
-  - Tag colors defined in CSS classes (`.tag-play`, `.tag-discovery`, etc.)
-- Adjust card shadows and hover effects in `.insight-card` and `.tracker-card` classes
-
-### Data Integration
-- Replace `generated_toy_dashboard_June2025_CLEANED.json` with your survey data
-- Follow the JSON structure:
-  ```json
-  {
-    "settings": {
-      "insightCards": [...],
-      "layout": {...}
-    },
-    "data": [
-      {
-        "code": "Q001",
-        "question": "Question text",
-        "type": "categorical",
-        "chartType": "bar",
-        "responses": {...}
-      }
-    ]
-  }
-  ```
-
 ### Adding New Trackers
-1. Update `trackers_page()` to add new tracker cards
-2. Create a new dashboard function (e.g., `sports_dashboard_page()`)
-3. Add routing logic in `main()` function
-4. Design tracker-specific insights and visualizations
 
-### Insight Categories
-- Add new categories by updating the tag list and CSS classes
-- Define category colors in the stylesheet
-- Map insights to appropriate related questions
+1. Update the `trackers` list in `trackers_page()`:
+```python
+{
+    "name": "New Tracker",
+    "description": "Description here",
+    "icon_color": "#3b82f6",
+    "bg_color": "#dbeafe",
+    "icon": "fa-solid fa-icon-name",
+    "active": True,  # Set to True to enable
+    "surveys": "10",
+    "responses": "2,000",
+    "updated": "1 day ago"
+}
+```
+
+2. Create a new JSON data file for the tracker
+3. Update the dashboard logic to load the appropriate data
+
+### Adding New Insights
+
+Add to the `insightCards` array in your JSON:
+```json
+{
+  "insight": "Your new insight text here",
+  "relatedQuestions": ["Q005", "Q006"],
+  "category": ["New Category"],
+  "tags": ["Tag1", "Tag2"]
+}
+```
+
+### Modifying Survey Questions
+
+Add new questions to the `data` array:
+```json
+{
+  "code": "Q030",
+  "question": "Your Question Title",
+  "type": "categorical",
+  "respondents": 500,
+  "chartType": "bar",
+  "responses": {
+    "Option 1": 150,
+    "Option 2": 200,
+    "Option 3": 150
+  }
+}
+```
+
+## Deployment
+
+### Deploying to Streamlit Community Cloud
+
+1. **Prepare Your Repository**
+   - Ensure your GitHub repository contains:
+     - `app.py` (main application file)
+     - `toy_dashboard_data.json` (data file)
+     - `requirements.txt` (dependencies)
+     - `tif.png` (logo file, optional)
+
+2. **Create Streamlit Cloud Account**
+   - Go to [share.streamlit.io](https://share.streamlit.io)
+   - Sign in with your GitHub account
+
+3. **Deploy Your App**
+   - Click "New app"
+   - Select your repository
+   - Choose branch (usually `main`)
+   - Set main file path: `app.py`
+   - Click "Deploy"
+
+4. **Environment Setup**
+   - The app will automatically install dependencies from `requirements.txt`
+   - Deployment typically takes 2-3 minutes
+
+5. **Access Your App**
+   - Your app will be available at:
+     ```
+     https://[your-github-username]-[repository-name]-[branch]-[random-string].streamlit.app
+     ```
+
+### Configuration Tips
+
+- **Secrets Management**: Use Streamlit secrets for sensitive data
+- **Resource Limits**: Free tier provides 1GB RAM and 1GB storage
+- **Custom Domain**: Available with Streamlit Cloud Teams plan
+
+## Contributing
+
+### Adding Features
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature-name`
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+### Code Style
+
+- Follow PEP 8 for Python code
+- Use meaningful variable names
+- Comment complex logic
+- Update documentation for new features
+
+### Testing Checklist
+
+- [ ] Login functionality works
+- [ ] All navigation links function correctly
+- [ ] Filters apply and reset properly
+- [ ] Charts render correctly
+- [ ] Insight filtering works as expected
+- [ ] Responsive design on different screen sizes
 
 ## Troubleshooting
 
 ### Common Issues
 
-1. **Data file not found error**:
-   - Ensure `generated_toy_dashboard_June2025_CLEANED.json` is in the same directory as `app.py`
-   - The app includes fallback sample data if the file is missing
+1. **Import Errors**
+   - Ensure all packages in requirements.txt are installed
+   - Check Python version compatibility
 
-2. **Charts not displaying**:
-   - Check that Plotly is properly installed: `pip install plotly>=5.17.0`
-   - Verify your browser supports WebGL for Plotly rendering
+2. **Data Not Loading**
+   - Verify `toy_dashboard_data.json` is in the same directory as `app.py`
+   - Check JSON syntax is valid
 
-3. **Login not working**:
-   - Current implementation accepts any username/password
+3. **Charts Not Displaying**
+   - Confirm Plotly is installed correctly
    - Check browser console for JavaScript errors
 
-4. **Styling issues**:
+4. **Styling Issues**
    - Clear browser cache
-   - Ensure you're using a modern browser (Chrome, Firefox, Safari, Edge)
+   - Ensure Font Awesome CDN is accessible
 
-5. **Session state errors**:
-   - Restart the Streamlit server
-   - Clear cookies for localhost:8501
+### Support
 
-## Production Deployment
-
-### Recommended Deployment Options
-
-1. **Streamlit Cloud** (easiest):
-   ```bash
-   # Push to GitHub, then deploy via streamlit.io
-   ```
-
-2. **Docker**:
-   ```dockerfile
-   FROM python:3.9-slim
-   WORKDIR /app
-   COPY requirements.txt .
-   RUN pip install -r requirements.txt
-   COPY . .
-   CMD ["streamlit", "run", "app.py"]
-   ```
-
-3. **Cloud Platforms**:
-   - AWS EC2 with nginx reverse proxy
-   - Google Cloud Run
-   - Azure App Service
-
-### Security Considerations
-
-- Implement proper authentication (OAuth2, SAML, etc.)
-- Use environment variables for sensitive data
-- Enable HTTPS with SSL certificates
-- Add rate limiting for API endpoints
-- Implement user role-based access control
-- Sanitize user inputs and file uploads
-
-### Performance Optimization
-
-- **Caching**: Use `@st.cache_data` for data loading functions
-- **Lazy Loading**: Load charts only when visible
-- **Data Pagination**: For large datasets, implement pagination
-- **Optimize Images**: Compress logos and backgrounds
-- **Minimize Re-renders**: Use session state effectively
-
-## License
-
-This project is available for educational and commercial use. Please customize it to meet your specific survey analytics needs.
-
-## Best Practices Implemented
-
-1. **Professional UI Design**: 
-   - Enterprise-grade dashboard layout
-   - Consistent color schemes and spacing
-   - Intuitive navigation flow
-   
-2. **Advanced State Management**: 
-   - Persistent selections across page navigation
-   - Dynamic content updates without page reload
-   - Filter state preservation
-   
-3. **Interactive Elements**:
-   - Clickable insight cards for data filtering
-   - Hover effects and visual feedback
-   - Multiple chart interaction options
-   
-4. **Data Visualization**:
-   - Appropriate chart types for different data
-   - Consistent color coding
-   - Clear labeling and legends
-   
-5. **User Experience**:
-   - Clear visual hierarchy
-   - Contextual information display
-   - Smooth transitions between views
-   
-6. **Responsive Design**:
-   - Flexible grid layouts
-   - Adaptive component sizing
-   - Mobile-friendly interface
-
-## Future Enhancements
-
-- **Authentication**: Implement OAuth or SSO for enterprise security
-- **Real-time Updates**: Connect to live data sources for automatic refresh
-- **Advanced Analytics**:
-  - Cross-question correlation analysis
-  - Predictive insights using ML
-  - Trend analysis across waves
-- **Customization**:
-  - User-specific dashboard layouts
-  - Custom insight creation
-  - Saved filter presets
-- **Export Options**:
-  - PowerPoint presentation generation
-  - Scheduled report delivery
-  - API access for external tools
-- **Additional Trackers**:
-  - Complete Sports Tracker implementation
-  - Education Tracker with learning analytics
-  - Custom tracker creation interface
-- **Collaboration Features**:
-  - Share insights with team members
-  - Commenting on specific data points
-  - Version control for reports
+For issues or questions:
+1. Check existing GitHub issues
+2. Create a new issue with:
+   - Description of the problem
+   - Steps to reproduce
+   - Expected vs actual behavior
+   - Screenshots if applicable
